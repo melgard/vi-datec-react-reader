@@ -129,7 +129,7 @@ class EpubView extends Component {
     const { loadingView, styles } = this.props;
         return (
             <div style={styles.viewHolder}>
-              {(loadingView)}
+              {!isLoaded && loadingView}
               {(isLoaded && this.renderBook())}
             </div>
         );
